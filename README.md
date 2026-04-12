@@ -15,3 +15,14 @@ In the best case, the target element is found at the middle of the array on the 
 In the worst case, the algorithm keeps dividing the array into halves until only one element remains. This takes about log₂(n)
 steps, so the time complexity is O(log n).
 So overall, the time complexity of binary search is O(log n) in the worst and average cases, and O(1) in the best case.
+
+
+Bubble sort:
+
+Bubble sort works by repeatedly comparing adjacent elements in an array and swapping them if they are in the wrong order. After each pass, the largest element moves to the end of the array.
+
+In the best case, when the array is already sorted, the time complexity is O(n) (with optimization). In the average and worst cases, it takes multiple passes through the array, resulting in a time complexity of O(n²).
+
+for every iteration of the outer loop, there is no need to go till the end of the array in the inner loop. This is because after each pass, the largest element is already placed at the end, so the sorted elements do not need to be compared again.
+
+
