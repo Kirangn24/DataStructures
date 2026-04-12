@@ -6,28 +6,34 @@ public class Datastructurs {
     public static void main(String a[]) {
     
         int num[] = {11, 23, 32, 43, 46, 54, 65, 67, 78, 89};
-        int target = 23;
+        int target = 123;
+
+        int result =  binarySearch(num,target);        
+        if(result!=-1) {
+        	System.out.println("element found at"+ result);
+        }
+        else 
+        	System.out.println("element not found");
         
-        int first = 0;
+    }
+
+	private static int binarySearch(int[] num, int target) {
+		int first = 0;
         int last = num.length - 1;
-        boolean found = false;
         
         while (first <= last) {
             int mid = (first + last) / 2;
             
             if (num[mid] == target) {
-                System.out.println("Found at index " + mid);
-                found = true;
-                break;  // stop loop once found
+               
+            	return mid;
             } else if (num[mid] > target) {
                 last = mid - 1;
             } else {
                 first = mid + 1;
             }
         }
-        
-        if (!found) {
-            System.out.println("Element not found");
-        }
-    }
+
+		return -1;
+	}
 }
