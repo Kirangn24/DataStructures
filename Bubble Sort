@@ -1,0 +1,38 @@
+package demo;
+
+public class Datastructurs {
+    
+    public static void main(String a[]) {
+    
+        int num[] = { 89, 54, 43, 11, 23, 32, 46, 65, 67, 78};
+        int len = num.length;
+        int temp;
+        
+        System.out.println("Before sorting the array");
+        for (int n : num) {
+        	System.out.print(n + " ");
+        }
+        
+        for(int i =0 ;i<len ;i++) {
+        	for(int j =0 ;j<len-i-1 ;j++) {
+        		if(num[j]>num[j+1]) {
+        			temp=num[j];
+        			num[j]=num[j+1];
+        			num[j+1]=temp;
+        			
+        		}
+        
+        	}
+        }
+        
+        System.out.println();
+        System.out.println();
+        
+        System.out.println("After sorting the array");
+        for (int n : num) {
+        	System.out.print(n + " ");
+        }
+        
+        
+    }
+}
