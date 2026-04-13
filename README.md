@@ -26,3 +26,8 @@ In the best case, when the array is already sorted, the time complexity is O(n) 
 for every iteration of the outer loop, there is no need to go till the end of the array in the inner loop. This is because after each pass, the largest element is already placed at the end, so the sorted elements do not need to be compared again.
 
 
+Selection Sort
+
+Selection sort works by repeatedly finding the smallest element from the unsorted part of the array and placing it at the correct position. In each pass, it selects the minimum element and swaps it with the first unsorted element.
+
+In the best, average, and worst cases, the time complexity is O(n²) because it always checks all remaining elements, even if the array is already sorted.
