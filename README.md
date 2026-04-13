@@ -20,14 +20,17 @@ So overall, the time complexity of binary search is O(log n) in the worst and av
 Bubble sort:
 
 Bubble sort works by repeatedly comparing adjacent elements in an array and swapping them if they are in the wrong order. After each pass, the largest element moves to the end of the array.
-
 In the best case, when the array is already sorted, the time complexity is O(n) (with optimization). In the average and worst cases, it takes multiple passes through the array, resulting in a time complexity of O(n²).
-
 for every iteration of the outer loop, there is no need to go till the end of the array in the inner loop. This is because after each pass, the largest element is already placed at the end, so the sorted elements do not need to be compared again.
 
 
-Selection Sort
+Selection Sort:
 
 Selection sort works by repeatedly finding the smallest element from the unsorted part of the array and placing it at the correct position. In each pass, it selects the minimum element and swaps it with the first unsorted element.
-
 In the best, average, and worst cases, the time complexity is O(n²) because it always checks all remaining elements, even if the array is already sorted.
+
+
+Insertion Sort:
+
+Insertion sort works by taking one element at a time and inserting it into its correct position in the already sorted part of the array. It is similar to arranging playing cards in your hand.
+In the best case, when the array is already sorted, the time complexity is O(n). In the average and worst cases, elements need to be shifted multiple times, resulting in a time complexity of O(n²).
