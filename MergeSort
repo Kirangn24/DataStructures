@@ -1,0 +1,89 @@
+package demo;
+
+public class Datastructurs {
+	
+private static void mergeSort(int[] num, int l, int r) {
+		
+		if(l<r) {
+			int mid = (l+r)/2;
+			mergeSort(num, l, mid);
+			mergeSort(num, mid+1, r);
+			
+			merge(num, l, mid, r);
+		}
+		
+	}
+private static void merge(int[] num, int l, int mid, int r) {
+	int n1=mid-l+1;
+	int n2=r-mid;
+	
+	int lArr[] = new int[n1];
+	int rArr[] = new int[n2];
+	
+	for(int x=0;x<n1;x++) {
+		lArr[x]=num[l+x];
+	}
+	
+	for(int x=0;x<n2;x++) {
+		rArr[x]=num[mid+1+x];
+	}
+	
+	int i=0;
+	int j=0;
+	int k=l;
+	
+	while(i<n1 && j<n2) {
+		if(lArr[i]>=rArr[j]) {
+			num[k] = rArr[j];
+			j++;
+		}else {
+			num[k] = lArr[i];
+			i++;
+		}
+		k++;
+	}
+	
+	while(i<n1) {
+		num[k]=lArr[i];
+		i++;
+		k++;
+	}
+	while(j<n2) {
+		num[k]=rArr[j];
+		j++;
+		k++;
+	}
+	
+	
+}
+    
+    public static void main(String a[]) {
+    
+        int num[] = { 89, 54, 43, 11, 23, 32, 46, 65, 67, 78};
+        int len = num.length;
+        int key;
+        int minindex=-1;
+        
+        System.out.println("Before sorting the array");
+        for (int n : num) {
+        	System.out.print(n + " ");
+        }System.out.println();
+
+        mergeSort( num, 0, num.length-1);
+
+        System.out.println("After sorting the array");
+        for (int n : num) {
+        	System.out.print(n + " ");
+        }
+        
+        
+    }
+
+	
+
+
+	
+	
+
+
+}
