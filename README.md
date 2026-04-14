@@ -34,3 +34,12 @@ Insertion Sort:
 
 Insertion sort works by taking one element at a time and inserting it into its correct position in the already sorted part of the array. It is similar to arranging playing cards in your hand.
 In the best case, when the array is already sorted, the time complexity is O(n). In the average and worst cases, elements need to be shifted multiple times, resulting in a time complexity of O(n²).
+
+
+Merge Sort:
+
+Merge sort works by dividing the array into smaller subarrays, sorting those subarrays, and then merging them back together in sorted order. It follows the divide-and-conquer approach. The array is repeatedly split into halves until each subarray contains only one element. Then, these subarrays are merged step by step, comparing elements and arranging them in order.
+During the merging process, two sorted subarrays are combined into a single sorted array by comparing their elements one by one and placing the smaller element first.
+In the best, average, and worst cases, the time complexity of merge sort is O(n log n). This is because the array is divided into halves (log n levels), and at each level, all elements are processed during merging (n work).
+Merge sort always takes the same amount of time regardless of whether the array is already sorted or not, because it still divides and merges the entire array.
+However, merge sort requires extra space O(n) for the temporary arrays used during merging, unlike some in-place sorting algorithms.
